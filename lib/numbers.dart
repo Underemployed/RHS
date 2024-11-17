@@ -61,7 +61,7 @@ class _ContactScreenState extends State<ContactScreen> {
           String name = row[0].toString().toLowerCase();
           // String phoneNumber = row[1].toString().toLowerCase();
 
-          return name.contains(query);
+          return name.contains(query.trim());
           // || phoneNumber.contains(query);
         }).toList();
 

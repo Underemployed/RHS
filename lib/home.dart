@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
-            color: Colors.black,
+            color: Colors.white,
             shadows: [
               Shadow(
                 blurRadius: 1.0,
@@ -34,8 +34,8 @@ class _HomeState extends State<Home> {
           ),
         ),
         centerTitle: true,
-        elevation: 2,
-        backgroundColor: Colors.white,
+        elevation: 0.0,
+        backgroundColor: const Color.fromARGB(255, 42, 39, 39),
       ),
       body: ListView(
         children: [
