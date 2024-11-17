@@ -23,7 +23,7 @@ class _RHSScreenState extends State<RHSScreen> {
   }
 
   void _loadCSV() async {
-    final rawData = await rootBundle.loadString("assets/data/mydata.csv");
+    final rawData = await rootBundle.loadString("assets/data/rhs.csv");
     List<List<dynamic>> listData = const CsvToListConverter().convert(rawData);
 
     setState(() {
@@ -113,10 +113,9 @@ class PersonDetailScreen extends StatelessWidget {
       {Key? key, required this.personData, required this.headers})
       : super(key: key);
 
-  // convert Google Drive sharing link to direct image link
+  // Function to convert Google Drive sharing link to direct image link
   String _convertDriveImageLink(String driveLink) {
     try {
-      //  file ID from drive link
       RegExp regExp = RegExp(r'/d/([^/]+)/');
       Match? match = regExp.firstMatch(driveLink);
 
@@ -128,7 +127,7 @@ class PersonDetailScreen extends StatelessWidget {
       print('Error converting drive link: $e');
     }
 
-    return driveLink; // Return original link if conversion fails
+    return driveLink;
   }
 
   // Function to launch URL
@@ -145,122 +144,92 @@ class PersonDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Person Details'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: headers.length,
-          itemBuilder: (context, index) {
-            String label = headers[index];
-            String value = personData[index].toString();
-
-            // check image is drive link
-            bool isPotentialImageLink = value.contains('drive.google.com') &&
-                value.contains('/d/') &&
-                value.contains('view?usp=sharing');
-
-            return Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade300),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Table(
+            border: TableBorder.all(color: Colors.grey.shade300),
+            columnWidths: {
+              0: FlexColumnWidth(1),
+              1: FlexColumnWidth(2),
+            },
+            children: [
+              // Generate table rows dynamically
+              for (int i = 0; i < headers.length; i++)
+                TableRow(
+                  decoration: BoxDecoration(
+                      color: i % 2 == 0 ? Colors.grey.shade100 : Colors.white),
                   children: [
-                    Expanded(
-                      flex: 1,
+                    // Header column
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        label,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
+                        headers[i],
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: isPotentialImageLink
-                          ? GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => FullScreenImage(
-                                      imageUrl: _convertDriveImageLink(value),
-                                    ),
-                                  ),
-                                );
-                              },
-                              child: Hero(
-                                tag: value,
-                                child: Image.network(
-                                  _convertDriveImageLink(value),
-                                  height: 50,
-                                  fit: BoxFit.contain,
-                                  loadingBuilder:
-                                      (context, child, loadingProgress) {
-                                    if (loadingProgress == null) return child;
-                                    return Center(
-                                      child: CircularProgressIndicator(),
-                                    );
-                                  },
-                                  errorBuilder: (context, error, stackTrace) {
-                                    return Icon(Icons.error);
-                                  },
-                                ),
-                              ),
-                            )
-                          : Text(
-                              value,
-                              style: TextStyle(fontSize: 14),
-                            ),
+                    // Value column
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: _buildDetailCell(headers[i], personData[i]),
                     ),
                   ],
                 ),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class FullScreenImage extends StatelessWidget {
-  final String imageUrl;
-
-  const FullScreenImage({Key? key, required this.imageUrl}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.white),
-      ),
-      body: Center(
-        child: Hero(
-          tag: imageUrl,
-          child: InteractiveViewer(
-            child: Image.network(
-              imageUrl,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) return child;
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              },
-              errorBuilder: (context, error, stackTrace) {
-                return Icon(Icons.error, color: Colors.white);
-              },
-            ),
+            ],
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildDetailCell(String header, dynamic value) {
+    // Check for image link
+    bool isPotentialImageLink = value.toString().contains('drive.google.com') &&
+        value.toString().contains('/d/') &&
+        value.toString().contains('view?usp=sharing');
+
+    // Check for map link
+    bool isMapLink = value.toString().contains('maps.app.goo.gl');
+
+    // If it's an image link
+    if (isPotentialImageLink) {
+      return GestureDetector(
+        onTap: () => _launchURL(value.toString()),
+        child: Image.network(
+          _convertDriveImageLink(value.toString()),
+          fit: BoxFit.fitWidth,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) return child;
+            return CircularProgressIndicator();
+          },
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(Icons.error);
+          },
+        ),
+      );
+    }
+
+    // If it's a map link
+    if (isMapLink) {
+      return GestureDetector(
+        onTap: () => _launchURL(value.toString()),
+        child: Row(
+          children: [
+            Icon(Icons.map, color: Colors.blue),
+            SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'Open Location',
+                style: TextStyle(
+                    color: Colors.blue, decoration: TextDecoration.underline),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    // Default text display
+    return Text(value.toString());
   }
 }
