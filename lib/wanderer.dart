@@ -18,9 +18,9 @@ class _WandererScreenState extends State<WandererScreen> {
 
   // Required headers
   final requiredHeaders = {
-    'name': ['name', 'person name', 'full name' ,"fullname", "contact name"],
+    'name': ['name', 'person name', 'full name', 'fullname', 'contact name'],
     'photo': ['photo', 'image', 'picture', "img"],
-    'address': ['address', 'location',"map"],
+    'address': ['address', 'location', "map"],
     'area': ['area', 'zone', 'region']
   };
 

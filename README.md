@@ -1,5 +1,14 @@
 # Fort Police Database App
 
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
+    <img src="screenshots/1.jpeg" width="250"/>
+    <img src="screenshots/2.jpeg" width="250"/>
+    <img src="screenshots/3.jpeg" width="250"/>
+    <img src="screenshots/4.jpeg" width="250"/>
+    <img src="screenshots/5.jpeg" width="250"/>
+</div>
+
+
 ## Data Structure Guide
 
 ### 1. Wanderer Database (wanderer.xlsx)
