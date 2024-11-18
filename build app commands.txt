@@ -3,3 +3,5 @@ flutter pub get
 dart run flutter_launcher_icons
 flutter build appbundle
 flutter build apk --release
+cp build/app/outputs/flutter-apk/app-release.apk "Fort Police Database.apk"
+cd ./
