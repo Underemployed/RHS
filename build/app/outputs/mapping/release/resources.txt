@@ -1212,285 +1212,289 @@ Marking id:tag_transition_group:2131165268 used because it matches string pool c
 Marking id:tag_unhandled_key_event_manager:2131165269 used because it matches string pool constant tag
 Marking id:tag_unhandled_key_listeners:2131165270 used because it matches string pool constant tag
 Marking id:tag_window_insets_animation_callback:2131165271 used because it matches string pool constant tag
-@com.fortpolice.rhs:anim/fragment_fast_out_extra_slow_in : reachable=false
-@com.fortpolice.rhs:animator/fragment_close_enter : reachable=false
-    @com.fortpolice.rhs:anim/fragment_fast_out_extra_slow_in
-@com.fortpolice.rhs:animator/fragment_close_exit : reachable=false
-    @com.fortpolice.rhs:anim/fragment_fast_out_extra_slow_in
-@com.fortpolice.rhs:animator/fragment_fade_enter : reachable=false
-@com.fortpolice.rhs:animator/fragment_fade_exit : reachable=false
-@com.fortpolice.rhs:animator/fragment_open_enter : reachable=false
-    @com.fortpolice.rhs:anim/fragment_fast_out_extra_slow_in
-@com.fortpolice.rhs:animator/fragment_open_exit : reachable=false
-    @com.fortpolice.rhs:anim/fragment_fast_out_extra_slow_in
-@com.fortpolice.rhs:attr/activityAction : reachable=true
-@com.fortpolice.rhs:attr/activityName : reachable=true
-@com.fortpolice.rhs:attr/alpha : reachable=false
-@com.fortpolice.rhs:attr/alwaysExpand : reachable=false
-@com.fortpolice.rhs:attr/animationBackgroundColor : reachable=false
-@com.fortpolice.rhs:attr/clearTop : reachable=false
-@com.fortpolice.rhs:attr/finishPrimaryWithPlaceholder : reachable=false
-@com.fortpolice.rhs:attr/finishPrimaryWithSecondary : reachable=false
-@com.fortpolice.rhs:attr/finishSecondaryWithPrimary : reachable=false
-@com.fortpolice.rhs:attr/font : reachable=false
-@com.fortpolice.rhs:attr/fontProviderAuthority : reachable=false
-@com.fortpolice.rhs:attr/fontProviderCerts : reachable=false
-@com.fortpolice.rhs:attr/fontProviderFetchStrategy : reachable=false
-@com.fortpolice.rhs:attr/fontProviderFetchTimeout : reachable=false
-@com.fortpolice.rhs:attr/fontProviderPackage : reachable=false
-@com.fortpolice.rhs:attr/fontProviderQuery : reachable=false
-@com.fortpolice.rhs:attr/fontProviderSystemFontFamily : reachable=false
-@com.fortpolice.rhs:attr/fontStyle : reachable=false
-@com.fortpolice.rhs:attr/fontVariationSettings : reachable=false
-@com.fortpolice.rhs:attr/fontWeight : reachable=false
-@com.fortpolice.rhs:attr/lStar : reachable=false
-@com.fortpolice.rhs:attr/nestedScrollViewStyle : reachable=false
-@com.fortpolice.rhs:attr/placeholderActivityName : reachable=false
-@com.fortpolice.rhs:attr/primaryActivityName : reachable=false
-@com.fortpolice.rhs:attr/queryPatterns : reachable=false
-@com.fortpolice.rhs:attr/secondaryActivityAction : reachable=false
-@com.fortpolice.rhs:attr/secondaryActivityName : reachable=false
-@com.fortpolice.rhs:attr/shortcutMatchRequired : reachable=true
-@com.fortpolice.rhs:attr/splitLayoutDirection : reachable=false
-@com.fortpolice.rhs:attr/splitMaxAspectRatioInLandscape : reachable=false
-@com.fortpolice.rhs:attr/splitMaxAspectRatioInPortrait : reachable=false
-@com.fortpolice.rhs:attr/splitMinHeightDp : reachable=false
-@com.fortpolice.rhs:attr/splitMinSmallestWidthDp : reachable=false
-@com.fortpolice.rhs:attr/splitMinWidthDp : reachable=false
-@com.fortpolice.rhs:attr/splitRatio : reachable=false
-@com.fortpolice.rhs:attr/stickyPlaceholder : reachable=false
-@com.fortpolice.rhs:attr/tag : reachable=true
-@com.fortpolice.rhs:attr/ttcIndex : reachable=false
-@com.fortpolice.rhs:color/androidx_core_ripple_material_light : reachable=true
-@com.fortpolice.rhs:color/androidx_core_secondary_text_default_material_light : reachable=true
-@com.fortpolice.rhs:color/browser_actions_bg_grey : reachable=false
-@com.fortpolice.rhs:color/browser_actions_divider_color : reachable=false
-@com.fortpolice.rhs:color/browser_actions_text_color : reachable=false
-@com.fortpolice.rhs:color/browser_actions_title_color : reachable=false
-@com.fortpolice.rhs:color/call_notification_answer_color : reachable=false
-@com.fortpolice.rhs:color/call_notification_decline_color : reachable=false
-@com.fortpolice.rhs:color/notification_action_color_filter : reachable=false
-    @com.fortpolice.rhs:color/androidx_core_secondary_text_default_material_light
-@com.fortpolice.rhs:color/notification_icon_bg_color : reachable=false
-@com.fortpolice.rhs:dimen/browser_actions_context_menu_max_width : reachable=true
-@com.fortpolice.rhs:dimen/browser_actions_context_menu_min_padding : reachable=true
-@com.fortpolice.rhs:dimen/compat_button_inset_horizontal_material : reachable=false
-@com.fortpolice.rhs:dimen/compat_button_inset_vertical_material : reachable=false
-@com.fortpolice.rhs:dimen/compat_button_padding_horizontal_material : reachable=false
-@com.fortpolice.rhs:dimen/compat_button_padding_vertical_material : reachable=false
-@com.fortpolice.rhs:dimen/compat_control_corner_material : reachable=false
-@com.fortpolice.rhs:dimen/compat_notification_large_icon_max_height : reachable=false
-@com.fortpolice.rhs:dimen/compat_notification_large_icon_max_width : reachable=false
-@com.fortpolice.rhs:dimen/notification_action_icon_size : reachable=false
-@com.fortpolice.rhs:dimen/notification_action_text_size : reachable=false
-@com.fortpolice.rhs:dimen/notification_big_circle_margin : reachable=false
-@com.fortpolice.rhs:dimen/notification_content_margin_start : reachable=false
-@com.fortpolice.rhs:dimen/notification_large_icon_height : reachable=false
-@com.fortpolice.rhs:dimen/notification_large_icon_width : reachable=false
-@com.fortpolice.rhs:dimen/notification_main_column_padding_top : reachable=false
-@com.fortpolice.rhs:dimen/notification_media_narrow_margin : reachable=false
-@com.fortpolice.rhs:dimen/notification_right_icon_size : reachable=false
-@com.fortpolice.rhs:dimen/notification_right_side_padding_top : reachable=false
-@com.fortpolice.rhs:dimen/notification_small_icon_background_padding : reachable=false
-@com.fortpolice.rhs:dimen/notification_small_icon_size_as_large : reachable=false
-@com.fortpolice.rhs:dimen/notification_subtext_size : reachable=false
-@com.fortpolice.rhs:dimen/notification_top_pad : reachable=false
-@com.fortpolice.rhs:dimen/notification_top_pad_large_text : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_answer : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_answer_low : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_answer_video : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_answer_video_low : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_decline : reachable=false
-@com.fortpolice.rhs:drawable/ic_call_decline_low : reachable=false
-@com.fortpolice.rhs:drawable/launch_background : reachable=false
-@com.fortpolice.rhs:drawable/notification_action_background : reachable=false
-    @com.fortpolice.rhs:color/androidx_core_ripple_material_light
-    @com.fortpolice.rhs:dimen/compat_button_inset_horizontal_material
-    @com.fortpolice.rhs:dimen/compat_button_inset_vertical_material
-    @com.fortpolice.rhs:dimen/compat_control_corner_material
-    @com.fortpolice.rhs:dimen/compat_button_padding_vertical_material
-    @com.fortpolice.rhs:dimen/compat_button_padding_horizontal_material
-@com.fortpolice.rhs:drawable/notification_bg : reachable=false
-    @com.fortpolice.rhs:drawable/notification_bg_normal_pressed
-    @com.fortpolice.rhs:drawable/notification_bg_normal
-@com.fortpolice.rhs:drawable/notification_bg_low : reachable=false
-    @com.fortpolice.rhs:drawable/notification_bg_low_pressed
-    @com.fortpolice.rhs:drawable/notification_bg_low_normal
-@com.fortpolice.rhs:drawable/notification_bg_low_normal : reachable=false
-@com.fortpolice.rhs:drawable/notification_bg_low_pressed : reachable=false
-@com.fortpolice.rhs:drawable/notification_bg_normal : reachable=false
-@com.fortpolice.rhs:drawable/notification_bg_normal_pressed : reachable=false
-@com.fortpolice.rhs:drawable/notification_icon_background : reachable=false
-    @com.fortpolice.rhs:color/notification_icon_bg_color
-@com.fortpolice.rhs:drawable/notification_oversize_large_icon_bg : reachable=false
-@com.fortpolice.rhs:drawable/notification_template_icon_bg : reachable=false
-@com.fortpolice.rhs:drawable/notification_template_icon_low_bg : reachable=false
-@com.fortpolice.rhs:drawable/notification_tile_bg : reachable=false
-    @com.fortpolice.rhs:drawable/notify_panel_notification_icon_bg
-@com.fortpolice.rhs:drawable/notify_panel_notification_icon_bg : reachable=false
-@com.fortpolice.rhs:id/accessibility_action_clickable_span : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_0 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_1 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_10 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_11 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_12 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_13 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_14 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_15 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_16 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_17 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_18 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_19 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_2 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_20 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_21 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_22 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_23 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_24 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_25 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_26 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_27 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_28 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_29 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_3 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_30 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_31 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_4 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_5 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_6 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_7 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_8 : reachable=true
-@com.fortpolice.rhs:id/accessibility_custom_action_9 : reachable=true
-@com.fortpolice.rhs:id/action_container : reachable=true
-@com.fortpolice.rhs:id/action_divider : reachable=true
-@com.fortpolice.rhs:id/action_image : reachable=true
-@com.fortpolice.rhs:id/action_text : reachable=true
-@com.fortpolice.rhs:id/actions : reachable=true
-@com.fortpolice.rhs:id/adjacent : reachable=false
-@com.fortpolice.rhs:id/always : reachable=false
-@com.fortpolice.rhs:id/alwaysAllow : reachable=false
-@com.fortpolice.rhs:id/alwaysDisallow : reachable=false
-@com.fortpolice.rhs:id/androidx_window_activity_scope : reachable=true
-@com.fortpolice.rhs:id/async : reachable=false
-@com.fortpolice.rhs:id/blocking : reachable=true
-@com.fortpolice.rhs:id/bottomToTop : reachable=false
-@com.fortpolice.rhs:id/browser_actions_header_text : reachable=false
-@com.fortpolice.rhs:id/browser_actions_menu_item_icon : reachable=false
-@com.fortpolice.rhs:id/browser_actions_menu_item_text : reachable=false
-@com.fortpolice.rhs:id/browser_actions_menu_items : reachable=false
-@com.fortpolice.rhs:id/browser_actions_menu_view : reachable=false
-@com.fortpolice.rhs:id/chronometer : reachable=false
-@com.fortpolice.rhs:id/dialog_button : reachable=false
-@com.fortpolice.rhs:id/edit_text_id : reachable=false
-@com.fortpolice.rhs:id/forever : reachable=false
-@com.fortpolice.rhs:id/fragment_container_view_tag : reachable=false
-@com.fortpolice.rhs:id/hide_ime_id : reachable=false
-@com.fortpolice.rhs:id/icon : reachable=false
-@com.fortpolice.rhs:id/icon_group : reachable=false
-@com.fortpolice.rhs:id/info : reachable=true
-@com.fortpolice.rhs:id/italic : reachable=false
-@com.fortpolice.rhs:id/line1 : reachable=false
-@com.fortpolice.rhs:id/line3 : reachable=false
-@com.fortpolice.rhs:id/locale : reachable=true
-@com.fortpolice.rhs:id/ltr : reachable=false
-@com.fortpolice.rhs:id/never : reachable=false
-@com.fortpolice.rhs:id/normal : reachable=false
-@com.fortpolice.rhs:id/notification_background : reachable=false
-@com.fortpolice.rhs:id/notification_main_column : reachable=false
-@com.fortpolice.rhs:id/notification_main_column_container : reachable=false
-@com.fortpolice.rhs:id/report_drawn : reachable=false
-@com.fortpolice.rhs:id/right_icon : reachable=false
-@com.fortpolice.rhs:id/right_side : reachable=false
-@com.fortpolice.rhs:id/rtl : reachable=false
-@com.fortpolice.rhs:id/special_effects_controller_view_tag : reachable=false
-@com.fortpolice.rhs:id/tag_accessibility_actions : reachable=true
-@com.fortpolice.rhs:id/tag_accessibility_clickable_spans : reachable=true
-@com.fortpolice.rhs:id/tag_accessibility_heading : reachable=true
-@com.fortpolice.rhs:id/tag_accessibility_pane_title : reachable=true
-@com.fortpolice.rhs:id/tag_on_apply_window_listener : reachable=true
-@com.fortpolice.rhs:id/tag_on_receive_content_listener : reachable=true
-@com.fortpolice.rhs:id/tag_on_receive_content_mime_types : reachable=true
-@com.fortpolice.rhs:id/tag_screen_reader_focusable : reachable=true
-@com.fortpolice.rhs:id/tag_state_description : reachable=true
-@com.fortpolice.rhs:id/tag_transition_group : reachable=true
-@com.fortpolice.rhs:id/tag_unhandled_key_event_manager : reachable=true
-@com.fortpolice.rhs:id/tag_unhandled_key_listeners : reachable=true
-@com.fortpolice.rhs:id/tag_window_insets_animation_callback : reachable=true
-@com.fortpolice.rhs:id/text : reachable=true
-@com.fortpolice.rhs:id/text2 : reachable=true
-@com.fortpolice.rhs:id/time : reachable=false
-@com.fortpolice.rhs:id/title : reachable=false
-@com.fortpolice.rhs:id/topToBottom : reachable=true
-@com.fortpolice.rhs:id/view_tree_lifecycle_owner : reachable=true
-@com.fortpolice.rhs:id/view_tree_on_back_pressed_dispatcher_owner : reachable=true
-@com.fortpolice.rhs:id/view_tree_saved_state_registry_owner : reachable=true
-@com.fortpolice.rhs:id/view_tree_view_model_store_owner : reachable=true
-@com.fortpolice.rhs:id/visible_removing_fragment_view_tag : reachable=false
-@com.fortpolice.rhs:integer/status_bar_notification_info_maxnum : reachable=false
-@com.fortpolice.rhs:layout/browser_actions_context_menu_page : reachable=false
-    @com.fortpolice.rhs:color/browser_actions_bg_grey
-    @com.fortpolice.rhs:color/browser_actions_title_color
-    @com.fortpolice.rhs:color/browser_actions_divider_color
-@com.fortpolice.rhs:layout/browser_actions_context_menu_row : reachable=false
-    @com.fortpolice.rhs:color/browser_actions_text_color
-@com.fortpolice.rhs:layout/custom_dialog : reachable=false
-@com.fortpolice.rhs:layout/ime_base_split_test_activity : reachable=false
-@com.fortpolice.rhs:layout/ime_secondary_split_test_activity : reachable=false
-@com.fortpolice.rhs:layout/notification_action : reachable=false
-    @com.fortpolice.rhs:style/Widget_Compat_NotificationActionContainer
-    @com.fortpolice.rhs:dimen/notification_action_icon_size
-    @com.fortpolice.rhs:style/Widget_Compat_NotificationActionText
-@com.fortpolice.rhs:layout/notification_action_tombstone : reachable=false
-    @com.fortpolice.rhs:style/Widget_Compat_NotificationActionContainer
-    @com.fortpolice.rhs:dimen/notification_action_icon_size
-    @com.fortpolice.rhs:style/Widget_Compat_NotificationActionText
-@com.fortpolice.rhs:layout/notification_template_custom_big : reachable=false
-    @com.fortpolice.rhs:layout/notification_template_icon_group
-    @com.fortpolice.rhs:dimen/notification_large_icon_width
-    @com.fortpolice.rhs:dimen/notification_large_icon_height
-    @com.fortpolice.rhs:dimen/notification_right_side_padding_top
-    @com.fortpolice.rhs:layout/notification_template_part_time
-    @com.fortpolice.rhs:layout/notification_template_part_chronometer
-    @com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Info
-@com.fortpolice.rhs:layout/notification_template_icon_group : reachable=false
-    @com.fortpolice.rhs:dimen/notification_large_icon_width
-    @com.fortpolice.rhs:dimen/notification_large_icon_height
-    @com.fortpolice.rhs:dimen/notification_big_circle_margin
-    @com.fortpolice.rhs:dimen/notification_right_icon_size
-@com.fortpolice.rhs:layout/notification_template_part_chronometer : reachable=false
-    @com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Time
-@com.fortpolice.rhs:layout/notification_template_part_time : reachable=false
-    @com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Time
-@com.fortpolice.rhs:mipmap/ic_launcher : reachable=false
-@com.fortpolice.rhs:mipmap/launcher_icon : reachable=true
-@com.fortpolice.rhs:string/androidx_startup : reachable=true
-@com.fortpolice.rhs:string/call_notification_answer_action : reachable=false
-@com.fortpolice.rhs:string/call_notification_answer_video_action : reachable=false
-@com.fortpolice.rhs:string/call_notification_decline_action : reachable=false
-@com.fortpolice.rhs:string/call_notification_hang_up_action : reachable=false
-@com.fortpolice.rhs:string/call_notification_incoming_text : reachable=false
-@com.fortpolice.rhs:string/call_notification_ongoing_text : reachable=false
-@com.fortpolice.rhs:string/call_notification_screening_text : reachable=false
-@com.fortpolice.rhs:string/copy_toast_msg : reachable=true
-@com.fortpolice.rhs:string/fallback_menu_item_copy_link : reachable=false
-@com.fortpolice.rhs:string/fallback_menu_item_open_in_browser : reachable=false
-@com.fortpolice.rhs:string/fallback_menu_item_share_link : reachable=false
-@com.fortpolice.rhs:string/status_bar_notification_info_overflow : reachable=false
-@com.fortpolice.rhs:style/LaunchTheme : reachable=true
-    @com.fortpolice.rhs:drawable/launch_background
-@com.fortpolice.rhs:style/NormalTheme : reachable=true
-@com.fortpolice.rhs:style/TextAppearance_Compat_Notification : reachable=false
-@com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Info : reachable=false
-@com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Line2 : reachable=false
-    @com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Info
-@com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Time : reachable=false
-@com.fortpolice.rhs:style/TextAppearance_Compat_Notification_Title : reachable=false
-@com.fortpolice.rhs:style/Widget_Compat_NotificationActionContainer : reachable=false
-    @com.fortpolice.rhs:drawable/notification_action_background
-@com.fortpolice.rhs:style/Widget_Compat_NotificationActionText : reachable=false
-    @com.fortpolice.rhs:color/androidx_core_secondary_text_default_material_light
-    @com.fortpolice.rhs:dimen/notification_action_text_size
-@com.fortpolice.rhs:xml/image_share_filepaths : reachable=true
+@anim/fragment_fast_out_extra_slow_in : reachable=false
+@animator/fragment_close_enter : reachable=false
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_close_exit : reachable=false
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_fade_enter : reachable=false
+@animator/fragment_fade_exit : reachable=false
+@animator/fragment_open_enter : reachable=false
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_open_exit : reachable=false
+    @anim/fragment_fast_out_extra_slow_in
+@attr/activityAction : reachable=true
+@attr/activityName : reachable=true
+@attr/alpha : reachable=false
+@attr/alwaysExpand : reachable=false
+@attr/animationBackgroundColor : reachable=false
+@attr/clearTop : reachable=false
+@attr/finishPrimaryWithPlaceholder : reachable=false
+@attr/finishPrimaryWithSecondary : reachable=false
+@attr/finishSecondaryWithPrimary : reachable=false
+@attr/font : reachable=false
+@attr/fontProviderAuthority : reachable=false
+@attr/fontProviderCerts : reachable=false
+@attr/fontProviderFetchStrategy : reachable=false
+@attr/fontProviderFetchTimeout : reachable=false
+@attr/fontProviderPackage : reachable=false
+@attr/fontProviderQuery : reachable=false
+@attr/fontProviderSystemFontFamily : reachable=false
+@attr/fontStyle : reachable=false
+@attr/fontVariationSettings : reachable=false
+@attr/fontWeight : reachable=false
+@attr/lStar : reachable=false
+@attr/nestedScrollViewStyle : reachable=false
+@attr/placeholderActivityName : reachable=false
+@attr/primaryActivityName : reachable=false
+@attr/queryPatterns : reachable=false
+@attr/secondaryActivityAction : reachable=false
+@attr/secondaryActivityName : reachable=false
+@attr/shortcutMatchRequired : reachable=true
+@attr/splitLayoutDirection : reachable=false
+@attr/splitMaxAspectRatioInLandscape : reachable=false
+@attr/splitMaxAspectRatioInPortrait : reachable=false
+@attr/splitMinHeightDp : reachable=false
+@attr/splitMinSmallestWidthDp : reachable=false
+@attr/splitMinWidthDp : reachable=false
+@attr/splitRatio : reachable=false
+@attr/stickyPlaceholder : reachable=false
+@attr/tag : reachable=true
+@attr/ttcIndex : reachable=false
+@color/androidx_core_ripple_material_light : reachable=true
+@color/androidx_core_secondary_text_default_material_light : reachable=true
+@color/browser_actions_bg_grey : reachable=false
+@color/browser_actions_divider_color : reachable=false
+@color/browser_actions_text_color : reachable=false
+@color/browser_actions_title_color : reachable=false
+@color/call_notification_answer_color : reachable=false
+@color/call_notification_decline_color : reachable=false
+@color/ic_launcher_background : reachable=false
+@color/notification_action_color_filter : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+@color/notification_icon_bg_color : reachable=false
+@dimen/browser_actions_context_menu_max_width : reachable=true
+@dimen/browser_actions_context_menu_min_padding : reachable=true
+@dimen/compat_button_inset_horizontal_material : reachable=false
+@dimen/compat_button_inset_vertical_material : reachable=false
+@dimen/compat_button_padding_horizontal_material : reachable=false
+@dimen/compat_button_padding_vertical_material : reachable=false
+@dimen/compat_control_corner_material : reachable=false
+@dimen/compat_notification_large_icon_max_height : reachable=false
+@dimen/compat_notification_large_icon_max_width : reachable=false
+@dimen/notification_action_icon_size : reachable=false
+@dimen/notification_action_text_size : reachable=false
+@dimen/notification_big_circle_margin : reachable=false
+@dimen/notification_content_margin_start : reachable=false
+@dimen/notification_large_icon_height : reachable=false
+@dimen/notification_large_icon_width : reachable=false
+@dimen/notification_main_column_padding_top : reachable=false
+@dimen/notification_media_narrow_margin : reachable=false
+@dimen/notification_right_icon_size : reachable=false
+@dimen/notification_right_side_padding_top : reachable=false
+@dimen/notification_small_icon_background_padding : reachable=false
+@dimen/notification_small_icon_size_as_large : reachable=false
+@dimen/notification_subtext_size : reachable=false
+@dimen/notification_top_pad : reachable=false
+@dimen/notification_top_pad_large_text : reachable=false
+@drawable/ic_call_answer : reachable=false
+@drawable/ic_call_answer_low : reachable=false
+@drawable/ic_call_answer_video : reachable=false
+@drawable/ic_call_answer_video_low : reachable=false
+@drawable/ic_call_decline : reachable=false
+@drawable/ic_call_decline_low : reachable=false
+@drawable/ic_launcher_foreground : reachable=false
+@drawable/launch_background : reachable=false
+@drawable/notification_action_background : reachable=false
+    @color/androidx_core_ripple_material_light
+    @dimen/compat_button_inset_horizontal_material
+    @dimen/compat_button_inset_vertical_material
+    @dimen/compat_control_corner_material
+    @dimen/compat_button_padding_vertical_material
+    @dimen/compat_button_padding_horizontal_material
+@drawable/notification_bg : reachable=false
+    @drawable/notification_bg_normal_pressed
+    @drawable/notification_bg_normal
+@drawable/notification_bg_low : reachable=false
+    @drawable/notification_bg_low_pressed
+    @drawable/notification_bg_low_normal
+@drawable/notification_bg_low_normal : reachable=false
+@drawable/notification_bg_low_pressed : reachable=false
+@drawable/notification_bg_normal : reachable=false
+@drawable/notification_bg_normal_pressed : reachable=false
+@drawable/notification_icon_background : reachable=false
+    @color/notification_icon_bg_color
+@drawable/notification_oversize_large_icon_bg : reachable=false
+@drawable/notification_template_icon_bg : reachable=false
+@drawable/notification_template_icon_low_bg : reachable=false
+@drawable/notification_tile_bg : reachable=false
+    @drawable/notify_panel_notification_icon_bg
+@drawable/notify_panel_notification_icon_bg : reachable=false
+@id/accessibility_action_clickable_span : reachable=true
+@id/accessibility_custom_action_0 : reachable=true
+@id/accessibility_custom_action_1 : reachable=true
+@id/accessibility_custom_action_10 : reachable=true
+@id/accessibility_custom_action_11 : reachable=true
+@id/accessibility_custom_action_12 : reachable=true
+@id/accessibility_custom_action_13 : reachable=true
+@id/accessibility_custom_action_14 : reachable=true
+@id/accessibility_custom_action_15 : reachable=true
+@id/accessibility_custom_action_16 : reachable=true
+@id/accessibility_custom_action_17 : reachable=true
+@id/accessibility_custom_action_18 : reachable=true
+@id/accessibility_custom_action_19 : reachable=true
+@id/accessibility_custom_action_2 : reachable=true
+@id/accessibility_custom_action_20 : reachable=true
+@id/accessibility_custom_action_21 : reachable=true
+@id/accessibility_custom_action_22 : reachable=true
+@id/accessibility_custom_action_23 : reachable=true
+@id/accessibility_custom_action_24 : reachable=true
+@id/accessibility_custom_action_25 : reachable=true
+@id/accessibility_custom_action_26 : reachable=true
+@id/accessibility_custom_action_27 : reachable=true
+@id/accessibility_custom_action_28 : reachable=true
+@id/accessibility_custom_action_29 : reachable=true
+@id/accessibility_custom_action_3 : reachable=true
+@id/accessibility_custom_action_30 : reachable=true
+@id/accessibility_custom_action_31 : reachable=true
+@id/accessibility_custom_action_4 : reachable=true
+@id/accessibility_custom_action_5 : reachable=true
+@id/accessibility_custom_action_6 : reachable=true
+@id/accessibility_custom_action_7 : reachable=true
+@id/accessibility_custom_action_8 : reachable=true
+@id/accessibility_custom_action_9 : reachable=true
+@id/action_container : reachable=true
+@id/action_divider : reachable=true
+@id/action_image : reachable=true
+@id/action_text : reachable=true
+@id/actions : reachable=true
+@id/adjacent : reachable=false
+@id/always : reachable=false
+@id/alwaysAllow : reachable=false
+@id/alwaysDisallow : reachable=false
+@id/androidx_window_activity_scope : reachable=true
+@id/async : reachable=false
+@id/blocking : reachable=true
+@id/bottomToTop : reachable=false
+@id/browser_actions_header_text : reachable=false
+@id/browser_actions_menu_item_icon : reachable=false
+@id/browser_actions_menu_item_text : reachable=false
+@id/browser_actions_menu_items : reachable=false
+@id/browser_actions_menu_view : reachable=false
+@id/chronometer : reachable=false
+@id/dialog_button : reachable=false
+@id/edit_text_id : reachable=false
+@id/forever : reachable=false
+@id/fragment_container_view_tag : reachable=false
+@id/hide_ime_id : reachable=false
+@id/icon : reachable=false
+@id/icon_group : reachable=false
+@id/info : reachable=true
+@id/italic : reachable=false
+@id/line1 : reachable=false
+@id/line3 : reachable=false
+@id/locale : reachable=true
+@id/ltr : reachable=false
+@id/never : reachable=false
+@id/normal : reachable=false
+@id/notification_background : reachable=false
+@id/notification_main_column : reachable=false
+@id/notification_main_column_container : reachable=false
+@id/report_drawn : reachable=false
+@id/right_icon : reachable=false
+@id/right_side : reachable=false
+@id/rtl : reachable=false
+@id/special_effects_controller_view_tag : reachable=false
+@id/tag_accessibility_actions : reachable=true
+@id/tag_accessibility_clickable_spans : reachable=true
+@id/tag_accessibility_heading : reachable=true
+@id/tag_accessibility_pane_title : reachable=true
+@id/tag_on_apply_window_listener : reachable=true
+@id/tag_on_receive_content_listener : reachable=true
+@id/tag_on_receive_content_mime_types : reachable=true
+@id/tag_screen_reader_focusable : reachable=true
+@id/tag_state_description : reachable=true
+@id/tag_transition_group : reachable=true
+@id/tag_unhandled_key_event_manager : reachable=true
+@id/tag_unhandled_key_listeners : reachable=true
+@id/tag_window_insets_animation_callback : reachable=true
+@id/text : reachable=true
+@id/text2 : reachable=true
+@id/time : reachable=false
+@id/title : reachable=false
+@id/topToBottom : reachable=true
+@id/view_tree_lifecycle_owner : reachable=true
+@id/view_tree_on_back_pressed_dispatcher_owner : reachable=true
+@id/view_tree_saved_state_registry_owner : reachable=true
+@id/view_tree_view_model_store_owner : reachable=true
+@id/visible_removing_fragment_view_tag : reachable=false
+@integer/status_bar_notification_info_maxnum : reachable=false
+@layout/browser_actions_context_menu_page : reachable=false
+    @color/browser_actions_bg_grey
+    @color/browser_actions_title_color
+    @color/browser_actions_divider_color
+@layout/browser_actions_context_menu_row : reachable=false
+    @color/browser_actions_text_color
+@layout/custom_dialog : reachable=false
+@layout/ime_base_split_test_activity : reachable=false
+@layout/ime_secondary_split_test_activity : reachable=false
+@layout/notification_action : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_action_tombstone : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_template_custom_big : reachable=false
+    @layout/notification_template_icon_group
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_right_side_padding_top
+    @layout/notification_template_part_time
+    @layout/notification_template_part_chronometer
+    @style/TextAppearance_Compat_Notification_Info
+@layout/notification_template_icon_group : reachable=false
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_big_circle_margin
+    @dimen/notification_right_icon_size
+@layout/notification_template_part_chronometer : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@layout/notification_template_part_time : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@mipmap/ic_launcher : reachable=false
+@mipmap/launcher_icon : reachable=true
+    @color/ic_launcher_background
+    @drawable/ic_launcher_foreground
+@string/androidx_startup : reachable=true
+@string/call_notification_answer_action : reachable=false
+@string/call_notification_answer_video_action : reachable=false
+@string/call_notification_decline_action : reachable=false
+@string/call_notification_hang_up_action : reachable=false
+@string/call_notification_incoming_text : reachable=false
+@string/call_notification_ongoing_text : reachable=false
+@string/call_notification_screening_text : reachable=false
+@string/copy_toast_msg : reachable=true
+@string/fallback_menu_item_copy_link : reachable=false
+@string/fallback_menu_item_open_in_browser : reachable=false
+@string/fallback_menu_item_share_link : reachable=false
+@string/status_bar_notification_info_overflow : reachable=false
+@style/LaunchTheme : reachable=true
+    @drawable/launch_background
+@style/NormalTheme : reachable=true
+@style/TextAppearance_Compat_Notification : reachable=false
+@style/TextAppearance_Compat_Notification_Info : reachable=false
+@style/TextAppearance_Compat_Notification_Line2 : reachable=false
+    @style/TextAppearance_Compat_Notification_Info
+@style/TextAppearance_Compat_Notification_Time : reachable=false
+@style/TextAppearance_Compat_Notification_Title : reachable=false
+@style/Widget_Compat_NotificationActionContainer : reachable=false
+    @drawable/notification_action_background
+@style/Widget_Compat_NotificationActionText : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+    @dimen/notification_action_text_size
+@xml/image_share_filepaths : reachable=true
 
 The root reachable resources are:
  attr:activityAction:2130903040
@@ -1583,8 +1587,8 @@ Unused resources are:
  color:browser_actions_title_color:2130968581
  color:call_notification_answer_color:2130968582
  color:call_notification_decline_color:2130968583
- color:notification_action_color_filter:2130968584
- color:notification_icon_bg_color:2130968585
+ color:notification_action_color_filter:2130968585
+ color:notification_icon_bg_color:2130968586
  dimen:compat_button_inset_horizontal_material:2131034114
  dimen:compat_button_inset_vertical_material:2131034115
  dimen:compat_button_padding_horizontal_material:2131034116
@@ -1613,19 +1617,19 @@ Unused resources are:
  drawable:ic_call_answer_video_low:2131099651
  drawable:ic_call_decline:2131099652
  drawable:ic_call_decline_low:2131099653
- drawable:notification_action_background:2131099655
- drawable:notification_bg:2131099656
- drawable:notification_bg_low:2131099657
- drawable:notification_bg_low_normal:2131099658
- drawable:notification_bg_low_pressed:2131099659
- drawable:notification_bg_normal:2131099660
- drawable:notification_bg_normal_pressed:2131099661
- drawable:notification_icon_background:2131099662
- drawable:notification_oversize_large_icon_bg:2131099663
- drawable:notification_template_icon_bg:2131099664
- drawable:notification_template_icon_low_bg:2131099665
- drawable:notification_tile_bg:2131099666
- drawable:notify_panel_notification_icon_bg:2131099667
+ drawable:notification_action_background:2131099656
+ drawable:notification_bg:2131099657
+ drawable:notification_bg_low:2131099658
+ drawable:notification_bg_low_normal:2131099659
+ drawable:notification_bg_low_pressed:2131099660
+ drawable:notification_bg_normal:2131099661
+ drawable:notification_bg_normal_pressed:2131099662
+ drawable:notification_icon_background:2131099663
+ drawable:notification_oversize_large_icon_bg:2131099664
+ drawable:notification_template_icon_bg:2131099665
+ drawable:notification_template_icon_low_bg:2131099666
+ drawable:notification_tile_bg:2131099667
+ drawable:notify_panel_notification_icon_bg:2131099668
  id:adjacent:2131165222
  id:always:2131165223
  id:alwaysAllow:2131165224
@@ -1693,89 +1697,89 @@ Unused resources are:
  style:TextAppearance_Compat_Notification_Title:2131492870
  style:Widget_Compat_NotificationActionContainer:2131492871
  style:Widget_Compat_NotificationActionText:2131492872
-Skipped unused resource base/res/anim-v21/fragment_fast_out_extra_slow_in.xml: 230 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_close_enter.xml: 2133 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_close_exit.xml: 2133 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_fade_enter.xml: 543 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_fade_exit.xml: 543 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_open_enter.xml: 2135 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/animator/fragment_open_exit.xml: 2135 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-v21/notification_action_background.xml: 2250 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable/notification_bg.xml: 751 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable/notification_bg_low.xml: 753 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable/notification_icon_background.xml: 314 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable/notification_tile_bg.xml: 319 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_answer.png: 270 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_answer_low.png: 270 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_answer_video.png: 199 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_answer_video_low.png: 199 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_decline.png: 201 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-ldpi-v4/ic_call_decline_low.png: 201 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_answer.png: 317 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_answer_low.png: 317 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_answer_video.png: 206 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_answer_video_low.png: 206 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_decline.png: 264 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/ic_call_decline_low.png: 264 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/notification_bg_low_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/notification_bg_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png: 98 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_answer.png: 472 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_answer_low.png: 472 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_answer_video.png: 254 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_answer_video_low.png: 254 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_decline.png: 375 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/ic_call_decline_low.png: 375 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notification_bg_low_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notification_bg_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png: 909 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png: 107 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_answer.png: 623 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_answer_low.png: 623 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_answer_video.png: 290 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_answer_video_low.png: 290 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_decline.png: 452 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/ic_call_decline_low.png: 452 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png: 252 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/notification_bg_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: 247 bytes (replaced with small dummy file of size 77 bytes)
-Skipped unused resource base/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png: 138 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_answer.png: 884 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_answer_low.png: 884 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_answer_video.png: 384 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_answer_video_low.png: 384 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_decline.png: 628 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxhdpi-v4/ic_call_decline_low.png: 628 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_answer.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_answer_low.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_answer_video.png: 465 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_answer_video_low.png: 465 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_decline.png: 823 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-xxxhdpi-v4/ic_call_decline_low.png: 823 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_answer.xml: 1515 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_answer_low.xml: 1373 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_answer_video.xml: 931 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_answer_video_low.xml: 789 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_decline.xml: 1689 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/drawable-anydpi-v21/ic_call_decline_low.xml: 1547 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/browser_actions_context_menu_page.xml: 3165 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/browser_actions_context_menu_row.xml: 2211 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/custom_dialog.xml: 828 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/ime_base_split_test_activity.xml: 365 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/ime_secondary_split_test_activity.xml: 1465 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout-v21/notification_action.xml: 2216 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout-v21/notification_action_tombstone.xml: 2677 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout-v21/notification_template_custom_big.xml: 6318 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout-v21/notification_template_icon_group.xml: 2432 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/notification_template_part_chronometer.xml: 643 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/layout/notification_template_part_time.xml: 630 bytes (replaced with small dummy file of size 9 bytes)
-Skipped unused resource base/res/mipmap-mdpi-v4/ic_launcher.png: 405 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/mipmap-hdpi-v4/ic_launcher.png: 507 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/mipmap-xhdpi-v4/ic_launcher.png: 684 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/mipmap-xxhdpi-v4/ic_launcher.png: 994 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource base/res/mipmap-xxxhdpi-v4/ic_launcher.png: 1406 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/anim-v21/fragment_fast_out_extra_slow_in.xml: 230 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_close_enter.xml: 2133 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_close_exit.xml: 2133 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_fade_enter.xml: 543 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_fade_exit.xml: 543 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_open_enter.xml: 2135 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/animator/fragment_open_exit.xml: 2135 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-v21/notification_action_background.xml: 2250 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_bg.xml: 751 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_bg_low.xml: 753 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_icon_background.xml: 314 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_tile_bg.xml: 319 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer.png: 270 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_low.png: 270 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_video.png: 199 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_video_low.png: 199 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_decline.png: 201 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_decline_low.png: 201 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer.png: 317 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_low.png: 317 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_video.png: 206 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_video_low.png: 206 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_decline.png: 264 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_decline_low.png: 264 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png: 98 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer.png: 472 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_low.png: 472 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_video.png: 254 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_video_low.png: 254 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_decline.png: 375 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_decline_low.png: 375 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png: 909 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png: 107 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer.png: 623 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_low.png: 623 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_video.png: 290 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_video_low.png: 290 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_decline.png: 452 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_decline_low.png: 452 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png: 252 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: 247 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png: 138 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer.png: 884 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_low.png: 884 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_video.png: 384 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_video_low.png: 384 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_decline.png: 628 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_decline_low.png: 628 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_low.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_video.png: 465 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_video_low.png: 465 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_decline.png: 823 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_decline_low.png: 823 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer.xml: 1515 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_low.xml: 1373 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_video.xml: 931 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_video_low.xml: 789 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_decline.xml: 1689 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_decline_low.xml: 1547 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/browser_actions_context_menu_page.xml: 3165 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/browser_actions_context_menu_row.xml: 2211 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/custom_dialog.xml: 828 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/ime_base_split_test_activity.xml: 365 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/ime_secondary_split_test_activity.xml: 1465 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_action.xml: 2216 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_action_tombstone.xml: 2677 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_template_custom_big.xml: 6318 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_template_icon_group.xml: 2432 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/notification_template_part_chronometer.xml: 643 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/notification_template_part_time.xml: 630 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/mipmap-mdpi-v4/ic_launcher.png: 405 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-hdpi-v4/ic_launcher.png: 507 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xhdpi-v4/ic_launcher.png: 684 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher.png: 994 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher.png: 1406 bytes (replaced with small dummy file of size 67 bytes)

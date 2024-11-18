@@ -3203,6 +3203,7 @@ androidx.window.reflection.ReflectionUtils:
     public final boolean validateImplementation$window_release(java.lang.Class,java.lang.Class)
     public static synthetic boolean validateReflection$window_release$default(java.lang.String,kotlin.jvm.functions.Function0,int,java.lang.Object)
 androidx.window.reflection.WindowExtensionsConstants
+com.example.rhs.R$color
 com.example.rhs.R$drawable
 com.example.rhs.R$mipmap
 com.example.rhs.R$style
