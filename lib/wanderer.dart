@@ -148,14 +148,28 @@ class _WandererScreenState extends State<WandererScreen> {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Image.network(
-                                _convertDriveImageLink(wanderer[1].toString()),
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Icon(Icons.person, size: 100);
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          FullScreenImageViewer(
+                                        imageUrl: _convertDriveImageLink(
+                                            wanderer[1].toString()),
+                                      ),
+                                    ),
+                                  );
                                 },
+                                child: Image.network(
+                                  _convertDriveImageLink(
+                                      wanderer[1].toString()),
+                                  width: 200,
+                                  fit: BoxFit.fitWidth,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Icon(Icons.person, size: 100);
+                                  },
+                                ),
                               ),
                               SizedBox(height: 8),
                               Text(
@@ -197,6 +211,48 @@ class _WandererScreenState extends State<WandererScreen> {
                       : null,
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class FullScreenImageViewer extends StatelessWidget {
+  final String imageUrl;
+
+  const FullScreenImageViewer({Key? key, required this.imageUrl})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Stack(
+        children: [
+          Center(
+            child: InteractiveViewer(
+              panEnabled: true,
+              boundaryMargin: EdgeInsets.all(20),
+              minScale: 0.5,
+              maxScale: 4,
+              child: Image.network(
+                imageUrl,
+                fit: BoxFit.contain,
+                errorBuilder: (context, error, stackTrace) {
+                  return Icon(Icons.error_outline,
+                      size: 50, color: Colors.white);
+                },
+              ),
+            ),
+          ),
+          Positioned(
+            top: 40,
+            right: 20,
+            child: IconButton(
+              icon: Icon(Icons.close, color: Colors.white),
+              onPressed: () => Navigator.pop(context),
             ),
           ),
         ],
