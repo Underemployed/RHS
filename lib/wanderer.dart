@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:csv/csv.dart';
+import 'package:excel/excel.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class WandererScreen extends StatefulWidget {
@@ -14,6 +14,15 @@ class _WandererScreenState extends State<WandererScreen> {
   List<List<dynamic>> _filteredData = [];
   List<String> _uniqueAreas = [];
   String? _selectedArea;
+  Map<String, int> _headerIndices = {};
+
+  // Required headers
+  final requiredHeaders = {
+    'name': ['name', 'person name', 'full name' ,"fullname", "contact name"],
+    'photo': ['photo', 'image', 'picture', "img"],
+    'address': ['address', 'location',"map"],
+    'area': ['area', 'zone', 'region']
+  };
 
   // Pagination
   int _currentPage = 1;
@@ -22,20 +31,88 @@ class _WandererScreenState extends State<WandererScreen> {
   @override
   void initState() {
     super.initState();
-    _loadCSV();
+    _loadExcel();
   }
 
-  void _loadCSV() async {
-    final rawData = await rootBundle.loadString("assets/data/wanderer.csv");
-    List<List<dynamic>> listData = const CsvToListConverter().convert(rawData);
+  int? _getHeaderIndex(List<String> possibleHeaders) {
+    for (var possible in possibleHeaders) {
+      for (var entry in _headerIndices.entries) {
+        if (entry.key.toLowerCase().trim() == possible) {
+          return entry.value;
+        }
+      }
+    }
+    return null;
+  }
 
-    // Remove header row
-    listData.removeAt(0);
+  void _loadExcel() async {
+    try {
+      final bytes = await rootBundle.load('assets/data/wanderer.xlsx');
+      final excel = Excel.decodeBytes(bytes.buffer.asUint8List());
 
-    setState(() {
-      _allData = listData;
-      _uniqueAreas = _allData.map((row) => row[3].toString()).toSet().toList();
-    });
+      var sheet = excel.tables[excel.tables.keys.first];
+      if (sheet == null) {
+        throw 'Excel sheet not found';
+      }
+
+      List<List<dynamic>> listData = [];
+
+      // Process headers
+      var headers = sheet.rows.first;
+      for (var i = 0; i < headers.length; i++) {
+        var headerValue =
+            headers[i]?.value?.toString().toLowerCase().trim() ?? '';
+        _headerIndices[headerValue] = i;
+      }
+
+      // Validate required headers
+      var missingHeaders = [];
+      for (var header in requiredHeaders.entries) {
+        if (_getHeaderIndex(header.value) == null) {
+          missingHeaders.add(header.key);
+        }
+      }
+
+      if (missingHeaders.isNotEmpty) {
+        throw 'Missing required headers: ${missingHeaders.join(", ")}';
+      }
+
+      // Process data rows
+      for (var row in sheet.rows.skip(1)) {
+        listData.add(row.map((cell) {
+          var value = cell?.value ?? '';
+          if (value is double) {
+            return value.toInt();
+          }
+          return value;
+        }).toList());
+      }
+
+      setState(() {
+        _allData = listData;
+        var areaIndex = _getHeaderIndex(requiredHeaders['area']!)!;
+        _uniqueAreas = _allData
+            .map((row) => row[areaIndex].toString())
+            .where((area) => area.isNotEmpty)
+            .toSet()
+            .toList();
+        _filteredData = _allData;
+      });
+    } catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Excel Loading Error'),
+          content: Text(e.toString()),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   void _filterByArea(String? area) {
@@ -46,7 +123,12 @@ class _WandererScreenState extends State<WandererScreen> {
       if (area == null) {
         _filteredData = _allData;
       } else {
-        _filteredData = _allData.where((row) => row[3] == area).toList();
+        var areaIndex = _getHeaderIndex(requiredHeaders['area']!)!;
+        _filteredData = _allData
+            .where((row) =>
+                row[areaIndex].toString().trim().toLowerCase() ==
+                area.toString().trim().toLowerCase())
+            .toList();
       }
     });
   }
@@ -142,6 +224,12 @@ class _WandererScreenState extends State<WandererScreen> {
                   ),
                   // Table Rows
                   ..._getPaginatedData().map((wanderer) {
+                    var nameIndex = _getHeaderIndex(requiredHeaders['name']!)!;
+                    var photoIndex =
+                        _getHeaderIndex(requiredHeaders['photo']!)!;
+                    var addressIndex =
+                        _getHeaderIndex(requiredHeaders['address']!)!;
+
                     return TableRow(
                       children: [
                         Padding(
@@ -156,14 +244,14 @@ class _WandererScreenState extends State<WandererScreen> {
                                       builder: (context) =>
                                           FullScreenImageViewer(
                                         imageUrl: _convertDriveImageLink(
-                                            wanderer[1].toString()),
+                                            wanderer[photoIndex].toString()),
                                       ),
                                     ),
                                   );
                                 },
                                 child: Image.network(
                                   _convertDriveImageLink(
-                                      wanderer[1].toString()),
+                                      wanderer[photoIndex].toString()),
                                   width: 200,
                                   fit: BoxFit.fitWidth,
                                   errorBuilder: (context, error, stackTrace) {
@@ -173,7 +261,7 @@ class _WandererScreenState extends State<WandererScreen> {
                               ),
                               SizedBox(height: 8),
                               Text(
-                                wanderer[0]?.toString() ?? 'Unknown',
+                                wanderer[nameIndex]?.toString() ?? 'Unknown',
                                 textAlign: TextAlign.center,
                               ),
                             ],
@@ -181,7 +269,8 @@ class _WandererScreenState extends State<WandererScreen> {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(wanderer[2]?.toString() ?? 'No Address'),
+                          child: Text(wanderer[addressIndex]?.toString() ??
+                              'No Address'),
                         ),
                       ],
                     );

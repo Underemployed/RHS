@@ -1,4 +1,4 @@
-import 'package:csv/csv.dart';
+import 'package:excel/excel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -19,18 +19,28 @@ class _RHSScreenState extends State<RHSScreen> {
   @override
   void initState() {
     super.initState();
-    _loadCSV();
+    _loadExcel();
   }
 
-  void _loadCSV() async {
-    final rawData = await rootBundle.loadString("assets/data/rhs.csv");
-    List<List<dynamic>> listData = const CsvToListConverter().convert(rawData);
+  void _loadExcel() async {
+    final bytes = await rootBundle.load('assets/data/rhs.xlsx');
+    final excel = Excel.decodeBytes(bytes.buffer.asUint8List());
+
+    var sheet = excel.tables[excel.tables.keys.first];
+    List<List<dynamic>> listData = [];
+
+    for (var row in sheet!.rows) {
+      listData.add(row.map((cell) {
+        var value = cell?.value ?? '';
+        if (value is double) {
+          return value.toInt();
+        }
+        return value;
+      }).toList());
+    }
 
     setState(() {
-      // First row is headers
       _headers = listData[0].map((header) => header.toString().trim()).toList();
-
-      // Data starts from second row
       _data = listData;
       _filteredData = listData.sublist(1);
     });
@@ -186,10 +196,11 @@ class PersonDetailScreen extends StatelessWidget {
     // Check for image link
     bool isPotentialImageLink = value.toString().contains('drive.google.com') &&
         value.toString().contains('/d/') &&
-        value.toString().contains('view?usp=sharing');
+        value.toString().contains('view');
 
     // Check for map link
-    bool isMapLink = value.toString().contains('maps.app.goo.gl');
+    bool isMapLink = value.toString().contains(
+        RegExp(r'maps\.app\.goo\.gl|maps\.google|map.*google|local\.google'));
 
     // If it's an image link
     if (isPotentialImageLink) {
