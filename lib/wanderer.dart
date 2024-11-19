@@ -16,7 +16,6 @@ class _WandererScreenState extends State<WandererScreen> {
   String? _selectedArea;
   Map<String, int> _headerIndices = {};
 
-  // Required headers
   final requiredHeaders = {
     'name': ['name', 'person name', 'full name', 'fullname', 'contact name'],
     'photo': ['photo', 'image', 'picture', "img"],
@@ -24,7 +23,6 @@ class _WandererScreenState extends State<WandererScreen> {
     'area': ['area', 'zone', 'region']
   };
 
-  // Pagination
   int _currentPage = 1;
   final int _itemsPerPage = 10;
 
@@ -57,7 +55,6 @@ class _WandererScreenState extends State<WandererScreen> {
 
       List<List<dynamic>> listData = [];
 
-      // Process headers
       var headers = sheet.rows.first;
       for (var i = 0; i < headers.length; i++) {
         var headerValue =
@@ -65,7 +62,6 @@ class _WandererScreenState extends State<WandererScreen> {
         _headerIndices[headerValue] = i;
       }
 
-      // Validate required headers
       var missingHeaders = [];
       for (var header in requiredHeaders.entries) {
         if (_getHeaderIndex(header.value) == null) {
@@ -77,7 +73,6 @@ class _WandererScreenState extends State<WandererScreen> {
         throw 'Missing required headers: ${missingHeaders.join(", ")}';
       }
 
-      // Process data rows
       for (var row in sheet.rows.skip(1)) {
         listData.add(row.map((cell) {
           var value = cell?.value ?? '';
@@ -164,65 +159,72 @@ class _WandererScreenState extends State<WandererScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wanderers'),
+        title: Text('Wanderers', style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        backgroundColor: Color(0xFF121212), 
       ),
       body: Column(
         children: [
-          // Area Dropdown
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: DropdownButton<String>(
               isExpanded: true,
-              hint: Text('Select Area'),
+              hint: Text('Select Area', style: TextStyle(color: Colors.white)),
               value: _selectedArea,
               items: _uniqueAreas.map((area) {
                 return DropdownMenuItem(
                   value: area,
-                  child: Text(area),
+                  child: Text(area, style: TextStyle(color: Colors.white)),
                 );
               }).toList(),
               onChanged: _filterByArea,
             ),
           ),
 
-          // Table Title
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Text(
               _selectedArea != null
                   ? 'Wanderers in ${_selectedArea!}'
                   : 'All Wanderers',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ),
 
-          // Wanderer Table
           Expanded(
             child: SingleChildScrollView(
               child: Table(
-                border: TableBorder.all(color: Colors.grey.shade300),
+                border: TableBorder.all(color: Colors.grey.shade700),
                 columnWidths: {
                   0: FlexColumnWidth(1),
                   1: FlexColumnWidth(2),
                 },
                 children: [
-                  // Table Header
+
                   TableRow(
-                    decoration: BoxDecoration(color: Colors.grey.shade100),
+                    decoration: BoxDecoration(color: Colors.grey.shade800),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child:
-                            Text('Name & Photo', textAlign: TextAlign.center),
+                        child: Text(
+                          'Name & Photo',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text('Address', textAlign: TextAlign.center),
+                        child: Text(
+                          'Address',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),
-                  // Table Rows
+
                   ..._getPaginatedData().map((wanderer) {
                     var nameIndex = _getHeaderIndex(requiredHeaders['name']!)!;
                     var photoIndex =
@@ -263,14 +265,17 @@ class _WandererScreenState extends State<WandererScreen> {
                               Text(
                                 wanderer[nameIndex]?.toString() ?? 'Unknown',
                                 textAlign: TextAlign.center,
+                                style: TextStyle(color: Colors.white),
                               ),
                             ],
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(wanderer[addressIndex]?.toString() ??
-                              'No Address'),
+                          child: Text(
+                            wanderer[addressIndex]?.toString() ?? 'No Address',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ],
                     );
@@ -280,21 +285,23 @@ class _WandererScreenState extends State<WandererScreen> {
             ),
           ),
 
-          // Pagination Controls
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  icon: Icon(Icons.arrow_back),
+                  icon: Icon(Icons.arrow_back, color: Colors.white),
                   onPressed: _currentPage > 1
                       ? () => setState(() => _currentPage--)
                       : null,
                 ),
-                Text('Page $_currentPage of $_totalPages'),
+                Text(
+                  'Page $_currentPage of $_totalPages',
+                  style: TextStyle(color: Colors.white),
+                ),
                 IconButton(
-                  icon: Icon(Icons.arrow_forward),
+                  icon: Icon(Icons.arrow_forward, color: Colors.white),
                   onPressed: _currentPage < _totalPages
                       ? () => setState(() => _currentPage++)
                       : null,
@@ -304,6 +311,7 @@ class _WandererScreenState extends State<WandererScreen> {
           ),
         ],
       ),
+      backgroundColor: Color(0xFF121212), 
     );
   }
 }

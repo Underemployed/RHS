@@ -48,14 +48,11 @@ class _RHSScreenState extends State<RHSScreen> {
 
   void _search_result(String query) {
     setState(() {
-      // If query is a valid integer, search by first column (typically ID)
       if (int.tryParse(query) != null) {
         _filteredData = _data.sublist(1).where((row) {
           return row[0].toString() == query;
         }).toList();
-      }
-      // Otherwise, search by name column (assuming second column is name)
-      else {
+      } else {
         _filteredData = _data.sublist(1).where((row) {
           return row[1].toString().toLowerCase().contains(query.toLowerCase());
         }).toList();
@@ -67,7 +64,16 @@ class _RHSScreenState extends State<RHSScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("RHS Search"),
+        title: Text(
+          "RHS Search",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Color(0xFF121212),
+        elevation: 0,
       ),
       body: _headers.isEmpty
           ? Center(child: CircularProgressIndicator())
@@ -77,10 +83,14 @@ class _RHSScreenState extends State<RHSScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
                     controller: _searchController,
+                    style: TextStyle(color: Colors.white), 
                     decoration: InputDecoration(
                       labelText: 'Search by ${_headers[0]} or ${_headers[1]}',
-                      prefixIcon: Icon(Icons.search),
+                      labelStyle: TextStyle(color: Colors.white70), 
+                      prefixIcon: Icon(Icons.search, color: Colors.white),
                       border: OutlineInputBorder(),
+                      filled: true,
+                      fillColor: Color(0xFF333333), 
                     ),
                     onChanged: _search_result,
                   ),
@@ -90,17 +100,25 @@ class _RHSScreenState extends State<RHSScreen> {
                     itemCount: _filteredData.length,
                     itemBuilder: (_, index) {
                       return Card(
-                        margin: const EdgeInsets.all(3),
+                        margin: const EdgeInsets.all(8),
+                        color: Color(0xFF333333), 
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                         child: ListTile(
                           title: Text(
-                              '${_filteredData[index][0]} - ${_filteredData[index][1]}'),
+                            '${_filteredData[index][0]} - ${_filteredData[index][1]}',
+                            style: TextStyle(color: Colors.white),
+                          ),
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => PersonDetailScreen(
-                                    personData: _filteredData[index],
-                                    headers: _headers),
+                                  personData: _filteredData[index],
+                                  headers: _headers,
+                                ),
                               ),
                             );
                           },
@@ -123,7 +141,6 @@ class PersonDetailScreen extends StatelessWidget {
       {Key? key, required this.personData, required this.headers})
       : super(key: key);
 
-  // Function to convert Google Drive sharing link to direct image link
   String _convertDriveImageLink(String driveLink) {
     try {
       RegExp regExp = RegExp(r'/d/([^/]+)/');
@@ -140,7 +157,6 @@ class PersonDetailScreen extends StatelessWidget {
     return driveLink;
   }
 
-  // Function to launch URL
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
@@ -153,32 +169,33 @@ class PersonDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Person Details'),
+        backgroundColor: Color(0xFF121212), 
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Table(
-            border: TableBorder.all(color: Colors.grey.shade300),
+            border: TableBorder.all(color: Colors.grey.shade700),
             columnWidths: {
               0: FlexColumnWidth(1),
               1: FlexColumnWidth(2),
             },
             children: [
-              // Generate table rows dynamically
               for (int i = 0; i < headers.length; i++)
                 TableRow(
                   decoration: BoxDecoration(
-                      color: i % 2 == 0 ? Colors.grey.shade100 : Colors.white),
+                      color: i % 2 == 0 ? Colors.grey.shade800 : Colors.black),
                   children: [
-                    // Header column
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         headers[i],
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                    // Value column
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: _buildDetailCell(headers[i], personData[i]),
@@ -193,16 +210,13 @@ class PersonDetailScreen extends StatelessWidget {
   }
 
   Widget _buildDetailCell(String header, dynamic value) {
-    // Check for image link
     bool isPotentialImageLink = value.toString().contains('drive.google.com') &&
         value.toString().contains('/d/') &&
         value.toString().contains('view');
 
-    // Check for map link
     bool isMapLink = value.toString().contains(
         RegExp(r'maps\.app\.goo\.gl|maps\.google|map.*google|local\.google'));
 
-    // If it's an image link
     if (isPotentialImageLink) {
       return GestureDetector(
         onTap: () => _launchURL(value.toString()),
@@ -214,13 +228,12 @@ class PersonDetailScreen extends StatelessWidget {
             return CircularProgressIndicator();
           },
           errorBuilder: (context, error, stackTrace) {
-            return Icon(Icons.error);
+            return Icon(Icons.error, color: Colors.red);
           },
         ),
       );
     }
 
-    // If it's a map link
     if (isMapLink) {
       return GestureDetector(
         onTap: () => _launchURL(value.toString()),
@@ -240,7 +253,9 @@ class PersonDetailScreen extends StatelessWidget {
       );
     }
 
-    // Default text display
-    return Text(value.toString());
+    return Text(
+      value.toString(),
+      style: TextStyle(color: Colors.white),
+    );
   }
 }

@@ -21,12 +21,12 @@ class _HomeState extends State<Home> {
         title: Text(
           'FORT POLICE STATION',
           style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
             color: Colors.white,
             shadows: [
               Shadow(
-                blurRadius: 1.0,
+                blurRadius: 3.0,
                 color: Colors.black45,
                 offset: Offset(1.0, 1.0),
               ),
@@ -35,9 +35,10 @@ class _HomeState extends State<Home> {
         ),
         centerTitle: true,
         elevation: 0.0,
-        backgroundColor: const Color.fromARGB(255, 42, 39, 39),
+        backgroundColor: const Color(0xFF121212), 
       ),
       body: ListView(
+        padding: EdgeInsets.all(16.0),
         children: [
           SizedBox(
             height: 10,
@@ -52,28 +53,31 @@ class _HomeState extends State<Home> {
 
   Widget _buildListTile(String title, Color color, String route) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      margin: EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.3),
-              blurRadius: 10,
-              offset: Offset(0, 4),
-            ),
-          ]),
+        color: Colors.grey[850], 
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.4),
+            blurRadius: 10,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
       child: ListTile(
+        contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
         title: Center(
           child: Text(
             title,
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white, 
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),
           ),
         ),
+        tileColor: Colors.transparent, 
         onTap: () {
           Navigator.pushNamed(context, route);
         },

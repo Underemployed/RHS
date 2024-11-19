@@ -11,15 +11,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RHS',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins',
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.tealAccent, 
+        scaffoldBackgroundColor: Color(0xFF121212), 
         textTheme: const TextTheme(
           titleLarge: TextStyle(
             fontSize: 20,
@@ -27,18 +26,35 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
           bodyLarge: TextStyle(
-            fontSize: 20,
+            fontSize: 18,
+            color: Colors.white70, 
             fontWeight: FontWeight.w500,
           ),
           bodyMedium: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.w500,
+            color: Colors.white70, 
+            fontWeight: FontWeight.w400,
           ),
           displayMedium: TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: 18,
-            color: Colors.black,
+            color: Colors.tealAccent, 
           ),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF121212), 
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        iconTheme: const IconThemeData(
+          color: Colors.white, 
+        ),
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.tealAccent, 
+          textTheme: ButtonTextTheme.primary, 
         ),
       ),
       routes: {

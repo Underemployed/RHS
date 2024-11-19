@@ -17,7 +17,6 @@ class _ContactScreenState extends State<ContactScreen> {
   final TextEditingController _searchController = TextEditingController();
   bool _isSearchPerformed = false;
 
-  // Required headers with alternative names
   final requiredHeaders = {
     'name': ['name', 'full name', 'person name', "fullname"],
     'phone': [
@@ -72,7 +71,6 @@ class _ContactScreenState extends State<ContactScreen> {
 
       List<List<dynamic>> listData = [];
 
-      // Process headers
       var headers = sheet.rows.first;
       for (var i = 0; i < headers.length; i++) {
         var headerValue =
@@ -80,7 +78,6 @@ class _ContactScreenState extends State<ContactScreen> {
         _headerIndices[headerValue] = i;
       }
 
-      // Validate required headers
       var missingHeaders = [];
       for (var header in requiredHeaders.entries) {
         if (_getHeaderIndex(header.value) == null) {
@@ -92,7 +89,6 @@ class _ContactScreenState extends State<ContactScreen> {
         throw 'Missing required headers: ${missingHeaders.join(", ")}';
       }
 
-      // Process data rows
       for (var row in sheet.rows.skip(1)) {
         listData.add(row.map((cell) {
           var value = cell?.value ?? '';
