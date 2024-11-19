@@ -14,42 +14,53 @@ class _HomeState extends State<Home> {
     Color(0xFF7367F0),
   ];
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'FORT POLICE STATION',
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-            shadows: [
-              Shadow(
-                blurRadius: 3.0,
-                color: Colors.black45,
-                offset: Offset(1.0, 1.0),
-              ),
-            ],
-          ),
-        ),
-        centerTitle: true,
-        elevation: 0.0,
-        backgroundColor: const Color(0xFF121212), 
-      ),
-      body: ListView(
-        padding: EdgeInsets.all(16.0),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
-            height: 10,
+          Icon(
+            Icons.shield, 
+            size: 26,
+            color: Colors.white,
           ),
-          _buildListTile('RHS', colors[0], '/rhs'),
-          _buildListTile('Wanderer', colors[1], '/wanderer'),
-          _buildListTile('Contact Details', colors[2], '/phone'),
+          SizedBox(width: 8), 
+          Text(
+            'FORT POLICE STATION',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+              shadows: [
+                Shadow(
+                  blurRadius: 3.0,
+                  color: Colors.black45,
+                  offset: Offset(1.0, 1.0),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
-    );
-  }
+      centerTitle: true,
+      elevation: 0.0,
+      backgroundColor: const Color(0xFF121212),
+    ),
+    body: ListView(
+      padding: EdgeInsets.all(16.0),
+      children: [
+        SizedBox(height: 20), 
+        _buildListTile('RHS', colors[0], '/rhs'),
+        SizedBox(height: 10), 
+        _buildListTile('Wanderer', colors[1], '/wanderer'),
+        SizedBox(height: 10), 
+        _buildListTile('Contact Details', colors[2], '/phone'),
+      ],
+    ),
+  );
+}
 
   Widget _buildListTile(String title, Color color, String route) {
     return Container(
